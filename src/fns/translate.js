@@ -1,12 +1,12 @@
 export function getGenero(genero) {
-    switch (genero) {
-    case 'Male':
+    switch (genero.toUpperCase()) {
+    case 'Male'.toUpperCase():
         return 'Masculino'
-    case 'Female':
+    case 'Female'.toUpperCase():
         return 'Feminino'
-    case 'unknown':
+    case 'unknown'.toUpperCase():
         return 'Desconhecido'
-    case 'Genderless':
+    case 'Genderless'.toUpperCase():
         return 'Sem Gênero'
     default:
         return genero
@@ -14,12 +14,12 @@ export function getGenero(genero) {
 }
 
 export function getStatus(status) {
-    switch (status) {
-    case 'Alive':
+    switch (status.toUpperCase()) {
+    case 'Alive'.toUpperCase():
         return 'Vivo'
-    case 'Dead':
+    case 'Dead'.toUpperCase():
         return 'Morto'
-    case 'unknown':
+    case 'unknown'.toUpperCase():
         return 'Desconhecido'
     default:
         return status
@@ -27,20 +27,20 @@ export function getStatus(status) {
 }
 
 export function getEspecie(especie) {
-    switch (especie) {
-    case 'Alien':
+    switch (especie.toUpperCase()) {
+    case 'Alien'.toUpperCase():
         return 'Alienígena'
-    case 'Human':
+    case 'Human'.toUpperCase():
         return 'Humano'
-    case 'Robot':
+    case 'Robot'.toUpperCase():
         return 'Robo'
-    case 'Disease':
+    case 'Disease'.toUpperCase():
         return 'Doença'
-    case 'Humanoid':
+    case 'Humanoid'.toUpperCase():
         return 'Humanoide'
-    case 'unknown':
+    case 'unknown'.toUpperCase():
         return 'Desconhecido'
-    case 'Mythological Creature':
+    case 'Mythological Creature'.toUpperCase():
         return 'Criatura Mitológica'
     default:
         return especie

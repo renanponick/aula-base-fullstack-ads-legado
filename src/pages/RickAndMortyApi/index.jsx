@@ -17,7 +17,7 @@ export default function RickAndMortyApi() {
     };
     
     const response = await fetch(
-      `https://rickandmortyapi.com/api/character?page=${page}${busca}`,
+      `https://futuramaapi.com/api/characters?page=${page}${busca}`,
       requestOptions
     )
 
@@ -27,7 +27,19 @@ export default function RickAndMortyApi() {
 
     const data = await response.json();
 
-    return { info: data.info, char: data.results, }
+    let info
+    if(!data?.info){
+      info = {
+        pages: data.total ?? 0
+      }
+    } else {
+      info = data.info
+    }
+
+    return { 
+      info,
+      char: data?.results ? data.results : data?.items
+    }
   }
 
   async function listaPersonagens() {
