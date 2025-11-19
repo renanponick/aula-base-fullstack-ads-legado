@@ -31,6 +31,7 @@ export const deleteUser = async (id) => {
   return api.delete(`/api/v1/user/${id}`);
 };
 
+// TODO 1 - Add metodo
 export const loginUser = async (email, senha) => {
   const body = { email, senha };
   const response = await api.post('/api/v1/login', body, {

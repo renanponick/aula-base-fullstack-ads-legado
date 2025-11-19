@@ -12,13 +12,14 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './routes/PrivateRoute';
 
-// 6 - Adicionar AuthProvider e PrivateRoute
+// TODO 4 - Adicionar AuthProvider
 function App() {
   return (
     <AuthProvider>
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+      {/* // TODO 6 - Adicionar PrivateRoute */}
           <Route element={<PrivateRoute />}>
             <Route path="/api" element={<RickAndMortyApi />} />
             <Route path="/character" element={<Character />} />

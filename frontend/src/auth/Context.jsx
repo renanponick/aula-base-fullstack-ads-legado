@@ -2,7 +2,7 @@
 import { createContext, useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 
-// 4 - Adicionar Provider, isTokenValid e getRole
+// TODO 8 - Adicionar Provider, isTokenValid e getRole
 const isTokenValid = (token) => {
   try {
     const decoded = jwtDecode(token);
@@ -23,6 +23,7 @@ const getRole = (token) => {
   }
 };
 
+// TODO 3 - Provider sem validações acima
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {

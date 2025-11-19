@@ -5,6 +5,7 @@ import { AuthContext } from '../../auth/Context';
 import { loginUser } from '../../api/user';
 import { toast } from 'react-toastify';
 
+// TODO 2 - Tela de login
 export default function Login() {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -28,10 +29,10 @@ export default function Login() {
     }
 
     try {
-        // 7 - Usar Axios para fazer a requisição de login
+        // TODO 5 - Usar Axios para fazer a requisição de login
         const response = await loginUser(email, senha);
         if (response.token) {
-            // 8 - Adicionar login ao AuthContext
+            // TODO 6 - Adicionar login ao AuthContext
             login(response.token);
             return navigate('/');
         }
